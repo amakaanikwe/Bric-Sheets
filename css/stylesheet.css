@@ -1,0 +1,21 @@
+.container {
+  margin: 30px;
+  border-style: solid;
+  padding: 20px;
+}
+
+#header {
+  font-size: 50px;
+  padding-top: 130px
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#mailbutton {
+  float: right;
+}
