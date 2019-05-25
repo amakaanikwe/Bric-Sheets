@@ -1,14 +1,14 @@
 app.controller('SearchController',['$scope','$http', '$uibModal',
   function SearchController($scope, $http, $uibModal) {
 
-    $http.get('js/data.json').then(function(response){
+    $http.get('public/js/data.json').then(function(response){
       $scope.producers = response.data;
 
       $scope.openModal = function () {
         var modalInstance = $uibModal.open({
             animation: true,
             size: 'lg',
-            templateUrl: 'js/partials/appModal.html',
+            templateUrl: 'public/js/partials/appModal.html',
             controller: function($scope) {
               $scope.close = function () {modalInstance.close() };
             }
