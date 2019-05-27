@@ -6,7 +6,7 @@
 
 #header {
   font-size: 50px;
-  padding-top: 130px
+  padding-top: 130px;
 }
 
 .centered {
@@ -18,4 +18,8 @@
 
 #mailbutton {
   float: right;
+}
+
+pagination {
+  height: 50px;
 }

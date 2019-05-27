@@ -1,4 +1,4 @@
-var app = angular.module('bricApp',['ngRoute', 'ui.bootstrap']);
+const app = angular.module('bricApp',['ngRoute', 'ui.bootstrap']);
 
 app.config (['$routeProvider', function($routeProvider) {
   $routeProvider
