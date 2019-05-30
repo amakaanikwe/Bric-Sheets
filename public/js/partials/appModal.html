@@ -3,9 +3,9 @@
 <!-- Modal Header-->
 <div class="modal-header">
   <h4 class="modal-title" id="modal-title">
-    {{ x.firstName + "  " + x.lastName }}
+    {{ person.firstName + "  " + person.lastName }}
   </h4>
-  <button type="button" class="close" data-dismiss="modal">
+  <button type="button" class="close"  ng-click="close()"data-dismiss="modal">
     &times;
   </button>
 </div>
@@ -19,7 +19,7 @@
       </div>
       <div class="col-lg-8">
         <ul>
-          <li>{{ x.bricCertification }}</li>
+          <li>{{ person.bricCertification }}</li>
         </ul>
       </div>
       <div>
@@ -27,39 +27,31 @@
       </div>
       <div class="col-lg-8">
         <ul>
-          <li>{{ x.workExperience }}</li>
+          <li>{{ person.workExperience }}</li>
         </ul>
       </div>
       <div>
-        <h5 class="col-lg-12">Programs Interests</h5>
+        <h5 class="col-lg-12">Program Interests</h5>
       </div>
 
       <div class="col-lg-8">
         <ul>
-          <li>{{ x.ProgramsInterests }}</li>
+          <li>{{ person.ProgramsInterests }}</li>
         </ul>
       </div>
       <div>
-        <form action="/action_page.php">
-          First name:<br />
-          <input type="text" name="firstname" value="" />
-          <br />
-          Last name:<br />
-          <input type="text" name="lastname" value="" />
-          <br /><br />
-          <button class="btn btn-light" id="mailbutton">
-            <i
-              class="fa fa-send-o"
-              style="font-size:36px; color:DodgerBlue"
-            ></i>
-          </button>
-        </form>
+
       </div>
     </div>
   </div>
   <!-- End of Row -->
 </div>
-<div class="modal-footer"></div>
+<div class="modal-footer">
+  <i
+  class="fa fa-send-o"
+  style="font-size:36px; color:DodgerBlue"
+></i>
+</div>
 <!-- End of Modal Body -->
 
 <!-- Modal footer

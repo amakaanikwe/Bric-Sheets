@@ -5,12 +5,29 @@ app.controller("SearchController", [
   function SearchController($scope, $http, $uibModal) {
     $http.get("public/js/data.json").then(function(response) {
       $scope.producers = response.data;
+      $scope.producerItems = response.data;
       $scope.filteredProducers = [],
       $scope.totalItems = $scope.producers.length,
       $scope.currentPage = 1,
-      $scope.numPerPage = 10,
+      $scope.numPerPage = 5,
       $scope.maxSize = 5;
-      
+
+      $scope.openModal = function(person) {
+        let modalInstance = $uibModal.open({
+          animation: true,
+          size: "lg",
+          ariaLabelledBy: "modal-title",
+          ariaDescribedBy: "modal-body",
+          templateUrl: "public/js/partials/appModal.html",
+          scope: $scope,
+          controller: function($scope) {
+            $scope.person = person;
+            $scope.close = function() {
+              modalInstance.close();
+            };
+          }
+        });
+      };
       // possible way to do pagination
       // $scope.$watch("currentPage + numPerPage", function() {
       //   let begin = ($scope.currentPage - 1) * $scope.numPerPage,
@@ -33,20 +50,7 @@ app.controller("SearchController", [
 
     
 
-    $scope.openModal = function() {
-      let modalInstance = $uibModal.open({
-        animation: true,
-        size: "lg",
-        ariaLabelledBy: "modal-title",
-        ariaDescribedBy: "modal-body",
-        templateUrl: "public/js/partials/appModal.html",
-        controller: function($scope) {
-          $scope.close = function() {
-            modalInstance.close();
-          };
-        }
-      });
-    };
+   
 
 
 

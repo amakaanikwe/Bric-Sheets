@@ -14,27 +14,27 @@
   <!-- Notes: Look into responsive images. -->
   <!-- Should be on the same row. Also use block level div to change background color -->
 
-  <section class="container" ng-repeat="x in producers.slice(((currentPage-1)*numPerPage), ((currentPage)*numPerPage))">
+  <section class="container" ng-repeat="person in producers.slice(((currentPage-1)*numPerPage), ((currentPage)*numPerPage))">
     <div class="row">
       <div class="col-lg-8">
-        <h3>{{ x.firstName + " " + x.lastName }}</h3>
+        <h3>{{ person.firstName + " " + person.lastName }}</h3>
       </div>
-      <div class="col-lg-4">{{ x.emailAddress }}</div>
+      <div class="col-lg-4">{{ person.emailAddress }}</div>
     </div>
     <div class="row">
       <h5 class="col-lg-12">Bric Certifications</h5>
       <div class="col-lg-8">
         <ul>
-          <li>{{ x.bricCertification }}</li>
+          <li>{{ person.bricCertification }}</li>
         </ul>
       </div>
       <h5 class="col-lg-12">Work Experience</h5>
       <div class="col-lg-8">
         <ul>
-          <li>{{ x.workExperience }}</li>
+          <li>{{ person.workExperience }}</li>
         </ul>
         <div>
-          <a ng-click="openModal()">
+          <a ng-click="openModal(person)">
             <button type="button" class="btn btn-outline-info">details</button>
           </a>
         </div>
