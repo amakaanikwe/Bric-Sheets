@@ -14,7 +14,7 @@
   <!-- Notes: Look into responsive images. -->
   <!-- Should be on the same row. Also use block level div to change background color -->
 
-  <section class="container" ng-repeat="person in producers.slice(((currentPage-1)*numPerPage), ((currentPage)*numPerPage))">
+  <section class="container" ng-repeat="person in producers.slice(((currentPage-1)*numPerPage), ((currentPage)*numPerPage))|orderBy: 'lastName' >
     <div class="row">
       <div class="col-lg-8">
         <h3>{{ person.firstName + " " + person.lastName }}</h3>
@@ -35,14 +35,14 @@
         </ul>
         <div>
           <a ng-click="openModal(person)">
-            <button type="button" class="btn btn-outline-info">details</button>
+            <button type="button" class="btn-info">details</button>
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <pagination uib-pagination ng-model="currentPage" total-items="totalItems" max-size="maxSize" ng-change="pageChanged()" class="pagination-sm" items-per-page="numPerPage" boundary-links="true"></pagination>
+  <pagination uib-pagination ng-model="currentPage" total-items="totalItems" max-size="maxSize" ng-change="pageChanged()" class="pagination-sm"  items-per-page="numPerPage" boundary-links="true"></pagination>
 
 
 </div>
