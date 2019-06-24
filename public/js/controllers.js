@@ -16,7 +16,7 @@ app.controller("SearchController", [
         let modalInstance = $uibModal.open({
           animation: true,
           size: "lg",
-          ariaLabelledBy: "modal-title",
+          ariaLabelledBy: "modal-title", 
           ariaDescribedBy: "modal-body",
           templateUrl: "public/js/partials/appModal.html",
           scope: $scope,
