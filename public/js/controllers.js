@@ -11,6 +11,13 @@ app.controller("SearchController", [
       $scope.currentPage = 1,
       $scope.numPerPage = 5,
       $scope.maxSize = 5;
+    
+      $scope.$watch("currentPage + numPerPage", function() {
+         begin = (($scope.currentPage - 1) * $scope.numPerPage)
+        let end = begin + $scope.numPerPage;
+    
+        $scope.filteredProducers = $scope.producers.slice(begin, end);
+      });
 
       $scope.openModal = function(person) {
         let modalInstance = $uibModal.open({
@@ -28,6 +35,8 @@ app.controller("SearchController", [
           }
         });
       };
+
+
       // possible way to do pagination
       // $scope.$watch("currentPage + numPerPage", function() {
       //   let begin = ($scope.currentPage - 1) * $scope.numPerPage,

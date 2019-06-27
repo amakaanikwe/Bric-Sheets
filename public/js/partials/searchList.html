@@ -14,7 +14,7 @@
   <!-- Notes: Look into responsive images. -->
   <!-- Should be on the same row. Also use block level div to change background color -->
 
-  <section class="container" ng-repeat="person in producers |orderBy: 'lastName' ">
+  <section class="container" ng-repeat="person in filteredProducers |orderBy: 'lastName' ">
     <div class="row">
       <div class="col-lg-8">
         <h3>{{ person.firstName + " " + person.lastName }}</h3>
@@ -42,7 +42,7 @@
     </div>
   </section>
 
-  <pagination ul uib-pagination ng-model="currentPage" total-items="totalItems" boundary-links="true"  max-size="maxSize" ng-change="pageChanged()" items-per-page="numPerPage" class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
+  <pagination uib-pagination ng-model="currentPage" total-items="producers.length" max-size="maxSize" items-per-page="numPerPage" boundary-links="true"  class="pagination-sm pagination" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
 
 
 </div>
