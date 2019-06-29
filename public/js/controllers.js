@@ -13,7 +13,7 @@ app.controller("SearchController", [
       $scope.maxSize = 5;
     
       $scope.$watch("currentPage + numPerPage", function() {
-         begin = (($scope.currentPage - 1) * $scope.numPerPage)
+        let begin = (($scope.currentPage - 1) * $scope.numPerPage)
         let end = begin + $scope.numPerPage;
     
         $scope.filteredProducers = $scope.producers.slice(begin, end);
@@ -24,7 +24,7 @@ app.controller("SearchController", [
           animation: true,
           size: "lg",
           ariaLabelledBy: "modal-title", 
-          ariaDescribedBy: "modal-body",
+           ariaDescribedBy: "modal-body",
           templateUrl: "public/js/partials/appModal.html",
           scope: $scope,
           controller: function($scope) {
