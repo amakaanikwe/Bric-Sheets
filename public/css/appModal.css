@@ -16,12 +16,12 @@
 }
 
 .modal-body {
-    background-color: #7f8584;
     text-align:center;
 }
 
 .textBG {
-    background-color: #f5faf9; 
+    background-color: #c5cecc;
+    border-radius: 5px; 
     padding: 20px;
     margin: 20px
 }
