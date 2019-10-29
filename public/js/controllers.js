@@ -3,8 +3,8 @@ app.controller("SearchController", [
   "$uibModal", "getDataFactory",
   function SearchController($scope, $uibModal, getDataFactory) {
 
-      $scope.producers = response.data;
-      $scope.producerItems = response.data;
+      $scope.producers = getDataFactory.getData();
+      $scope.producerItems = getDataFactory.getData();
       $scope.filteredProducers = [],
       $scope.totalItems = $scope.producers.length,
       $scope.currentPage = 1,
