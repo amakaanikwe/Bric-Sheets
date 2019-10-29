@@ -1,5 +1,5 @@
 // Factories are used whenever you want to creat http logic to connect with the database
-angular.module('bricApp').factory('search', function(){
+angular.module('bricApp').factory('getDataFactory', function(){
 
 
     function getData() {

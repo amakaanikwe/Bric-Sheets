@@ -1,7 +1,7 @@
 app.controller("SearchController", [
   "$scope",
-  "$uibModal",
-  function SearchController($scope, $uibModal) {
+  "$uibModal", "getDataFactory",
+  function SearchController($scope, $uibModal, getDataFactory) {
 
       $scope.producers = response.data;
       $scope.producerItems = response.data;
