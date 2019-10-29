@@ -1,5 +1,4 @@
-
-app.factory('dataFactory', '$http', function($http){
+app.factory('DataFactory', '$http', function($http){
 
     function getData() {
 

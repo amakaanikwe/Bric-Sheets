@@ -1,21 +1,28 @@
 app.controller("SearchController", [
   "$scope",
-  "$uibModal", "dataFactory",
-  function SearchController($scope, $uibModal, dataFactory) {
-
-      $scope.producers, 
-      $scope.producerItems = dataFactory.getData();
+  "$http",
+  "$uibModal",
+  function SearchController($scope,$http, $uibModal) {
+    $http.get('public/js/data/data.json').then(function(response) { 
+      $scope.producers = response.data; 
+      $scope.producerItems = response.data;
       $scope.filteredProducers = [],
       $scope.totalItems = $scope.producers.length,
       $scope.currentPage = 1,
       $scope.numPerPage = 5,
       $scope.maxSize = 5;
     
-      dataFactory.getData().success(function(data){
-        $scope.producers = data;
-      }).error(function(error) {
-        console.log(error);
-      });
+      // DataFactory.getData().success(function(data){
+      //   $scope.producers = data;
+      // }).error(function(error) {
+      //   console.log(error);
+      // });
+  
+      // DataFactory.getData().success(function(data){
+      //   $scope.producerItems = data;
+      // }).error(function(error) {
+      //   console.log(error);
+      // });
 
       $scope.$watch("currentPage + numPerPage", function() {
         let begin = (($scope.currentPage - 1) * $scope.numPerPage)
@@ -41,9 +48,10 @@ app.controller("SearchController", [
         });
       };
 
-
+    });
 
   }
+  
 ]);
 
 
