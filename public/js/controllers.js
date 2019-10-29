@@ -1,9 +1,8 @@
 app.controller("SearchController", [
   "$scope",
-  "$http",
   "$uibModal",
-  function SearchController($scope, $http, $uibModal) {
-    $http.get("public/js/data.json").then(function(response) {
+  function SearchController($scope, $uibModal) {
+
       $scope.producers = response.data;
       $scope.producerItems = response.data;
       $scope.filteredProducers = [],
@@ -35,16 +34,6 @@ app.controller("SearchController", [
           }
         });
       };
-
-
-      
-    });
-
-    
-
-   
-
-
 
 
 
