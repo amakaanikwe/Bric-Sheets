@@ -1,22 +1,22 @@
 app.controller("SearchController", [
   "$scope",
-  "$uibModal", "getDataFactory",
-  function SearchController($scope, $uibModal, getDataFactory) {
+  "$uibModal", "dataFactory",
+  function SearchController($scope, $uibModal, dataFactory) {
 
       $scope.producers, 
-      $scope.producerItems = getDataFactory.getData();
+      $scope.producerItems = dataFactory.getData();
       $scope.filteredProducers = [],
       $scope.totalItems = $scope.producers.length,
       $scope.currentPage = 1,
       $scope.numPerPage = 5,
       $scope.maxSize = 5;
     
-      getDataFactory.getData().success(fuction(data){
+      dataFactory.getData().success(function(data){
         $scope.producers = data;
-      }).error(fucton(error) {
+      }).error(function(error) {
         console.log(error);
       });
-      
+
       $scope.$watch("currentPage + numPerPage", function() {
         let begin = (($scope.currentPage - 1) * $scope.numPerPage)
         let end = begin + $scope.numPerPage;
