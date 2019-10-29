@@ -3,7 +3,7 @@ app.controller("SearchController", [
   "$uibModal", "getDataFactory",
   function SearchController($scope, $uibModal, getDataFactory) {
 
-      $scope.producers = getDataFactory.getData();
+      $scope.producers, 
       $scope.producerItems = getDataFactory.getData();
       $scope.filteredProducers = [],
       $scope.totalItems = $scope.producers.length,
@@ -11,6 +11,12 @@ app.controller("SearchController", [
       $scope.numPerPage = 5,
       $scope.maxSize = 5;
     
+      getDataFactory.getData().success(fuction(data){
+        $scope.producers = data;
+      }).error(fucton(error) {
+        console.log(error);
+      });
+      
       $scope.$watch("currentPage + numPerPage", function() {
         let begin = (($scope.currentPage - 1) * $scope.numPerPage)
         let end = begin + $scope.numPerPage;

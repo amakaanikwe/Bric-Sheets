@@ -1,9 +1,9 @@
-// Factories are used whenever you want to creat http logic to connect with the database
-app.factory('getDataFactory', function(){
 
+app.factory('getDataFactory', '$http', function($http){
 
     function getData() {
-        return data; 
+
+        return $http.get('data/data.json'); 
     }
 
     return {
