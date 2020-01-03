@@ -1,5 +1,4 @@
 .modal-header {
-    background-color: #60b3aa; 
     padding: 40px
 }
 
@@ -26,10 +25,11 @@
 }
 
 .textBG {
-    background-color: #c5cecc;
-    border-radius: 5px; 
+    background-color: #757979f5;
+    color: white;
+    /* border-radius: 5px; 
     padding: 20px;
-    margin: 20px
+    margin: 20px */
 }
 
 .bricCert {
