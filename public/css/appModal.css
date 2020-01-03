@@ -7,6 +7,12 @@
     float: right
 }
 
+.fa-user-o {
+    padding: 50px;
+    border: 1px solid black;
+    border-radius: 90px; 
+}
+
 .icon {
     text-align: center
 }
