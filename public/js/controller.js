@@ -24,6 +24,7 @@ app.controller("SearchController", [
       //   console.log(error);
       // });
 
+      // Pagination
       $scope.$watch("currentPage + numPerPage", function() {
         let begin = (($scope.currentPage - 1) * $scope.numPerPage)
         let end = begin + $scope.numPerPage;
@@ -31,6 +32,7 @@ app.controller("SearchController", [
         $scope.filteredProducers = $scope.producers.slice(begin, end);
       });
 
+      // Modal
       $scope.openModal = function(person) {
         let modalInstance = $uibModal.open({
           animation: true,
