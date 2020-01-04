@@ -24,17 +24,19 @@ app.controller("SearchController", [
       //   console.log(error);
       // });
 
-      console.log($scope.producers);
-
-      function sortByLast (producers) {
-        for (let i = 0; i < producers.length; i++) {
-          let producersLastName = producers[i].lastName;
-          producersLastName.sort();
-          console.log(producersLastName);
+      // Sort by last name
+      let compareObjects = function(a,b){
+        if(a.lastName < b.lastName){
+          return -1;
         }
-      }
+        if(a.lastname > b.lastname){
+          return 1;
+        }
+      };
 
-      sortByLast($scope.producers);
+      $scope.producers.sort(compareObjects);
+
+     
 
       // Pagination
       $scope.$watch("currentPage + numPerPage", function() {
