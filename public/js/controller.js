@@ -28,7 +28,8 @@ app.controller("SearchController", [
 
       function sortByLast (producers) {
         for (let i = 0; i < producers.length; i++) {
-          producersLastName = producers[i].lastName;
+          let producersLastName = producers[i].lastName;
+          producersLastName.sort();
           console.log(producersLastName);
         }
       }
