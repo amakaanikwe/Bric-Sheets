@@ -24,6 +24,17 @@ app.controller("SearchController", [
       //   console.log(error);
       // });
 
+      console.log($scope.producers);
+
+      function sortByLast (producers) {
+        for (let i = 0; i < producers.length; i++) {
+          producersLastName = producers[i].lastName;
+          console.log(producersLastName);
+        }
+      }
+
+      sortByLast($scope.producers);
+
       // Pagination
       $scope.$watch("currentPage + numPerPage", function() {
         let begin = (($scope.currentPage - 1) * $scope.numPerPage)
