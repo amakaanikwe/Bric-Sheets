@@ -1,5 +1,5 @@
 app.controller("SearchController", function SerchController($scope,$http, $uibModal){
-  $scope.producers = {
+  $scope.producers = [{
   "timestamp": "2016-05-08T17:09:25.715Z",
   "firstName": "Kevin",
   "lastName": "L.",
@@ -223,6 +223,8 @@ app.controller("SearchController", function SerchController($scope,$http, $uibMo
   "Are you interested in volunteering at Brooklyn Free Speech events?": "Yes",
   "Please select the events you're most interested in volunteering with below.": "Media Education Orientation, BRIC FLIX, B Scene, Media Talks."
 }
+
+]
 
 $scope.producerItems = $scope.producers;
 $scope.filteredProducers = [],
