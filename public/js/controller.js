@@ -3,7 +3,7 @@ app.controller("SearchController", [
   "$http",
   "$uibModal",
   function SearchController($scope,$http, $uibModal) {
-    $http.get('public/js/data/data.json').then(function(response) { 
+    $http.get('./js/data/data.json').then(function(response) { 
       $scope.producers = response.data; 
       $scope.producerItems = response.data;
       $scope.filteredProducers = [],
@@ -53,7 +53,7 @@ app.controller("SearchController", [
           size: "lg",
           ariaLabelledBy: "modal-title", 
            ariaDescribedBy: "modal-body",
-          templateUrl: "public/js/partials/appModal.html",
+          templateUrl: "./js/partials/appModal.html",
           scope: $scope,
           controller: function($scope) {
             $scope.person = person;
