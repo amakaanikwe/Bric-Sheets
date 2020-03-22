@@ -2,8 +2,9 @@
   "name": "bric_sheets",
   "version": "1.0.0",
   "description": "Producer app",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "start":"node server.js",
     "test": "n/a"
   },
   "repository": {
