@@ -2,9 +2,12 @@
   "name": "bric_sheets",
   "version": "1.0.0",
   "description": "Producer app",
+  "dependencies": {
+    "express": "*"
+  },
   "main": "server.js",
   "scripts": {
-    "start":"node server.js",
+    "start": "node server.js",
     "test": "n/a"
   },
   "repository": {
@@ -19,5 +22,5 @@
   "bugs": {
     "url": "https://github.com/amakaanikwe/Bric-Sheets/issues"
   },
-  "homepage": "https://github.com/amakaanikwe/Bric-Sheets#readme"
+  "homepage": "./public/index.html"
 }
