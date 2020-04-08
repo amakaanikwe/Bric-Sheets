@@ -1,7 +1,5 @@
 app.controller('RegistrationController', ['$scope','$firebase', '$firebaseAuth', function($scope){
 
-    var ref = firebase.database().ref();
-    var auth = $firebaseAuth();
     
     $scope.login = function() {
         $scope.message = "Welcome " + $scope.user.email;
@@ -16,7 +14,7 @@ app.controller('RegistrationController', ['$scope','$firebase', '$firebaseAuth',
         }).catch(function(error) {
             $scope.message = error.message;
         }); // createUserWithEmailAndPassword  
-         
+
     };//register
     
 }]);//Controller
