@@ -29,53 +29,67 @@
     <!-- AngularFire -->
     <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
 
-
     <!-- load below before stylesheets to fix MIME type error -->
-    <base href="/">
-
-    <link rel="stylesheet" type="text/css" href="./public/css/searchStylesheet.css" />
-    <link rel="stylesheet" type="text/css" href="./public/css/appModal.css" />
-    
-
+    <base href="/" />
 
     <link
-      rel="stylesheet" type="text/css"
+      rel="stylesheet"
+      type="text/css"
+      href="./public/css/searchStylesheet.css"
+    />
+    <link rel="stylesheet" type="text/css" href="./public/css/appModal.css" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     />
     <link
-      rel="stylesheet" type="text/css"
+      rel="stylesheet"
+      type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/@babel/standalone/babel.min.js"
+    ></script>
 
     <!-- Firebase -->
-
-
 
     <!-- Setting Favicon sample and default -->
     <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/> -->
     <link rel="shortcut icon" href="http://example.com/myicon.ico" />
-
   </head>
 
   <body>
-    <header> 
-      <nav ng-include="'../src/modules/login_registration/views/navigation.html'"></nav>
+    <header>
+      <nav
+        ng-include="'../src/modules/login_registration/views/navigation.html'"
+      ></nav>
     </header>
     <div ng-view></div>
 
-
     <script type="text/javascript" src="./public/js/app.js"></script>
     <script type="text/javascript" src="./public/js/controller.js"></script>
-    <script type="text/javascript" src="../src/modules/login_registration/services/authenticationService.js"></script>
-    <script type="text/javascript" src="../src/modules/login_registration/registrationController.js"></script>
+    <script
+      type="text/javascript"
+      src="../src/modules/login_registration/services/authenticationService.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../src/modules/login_registration/registrationController.js"
+    ></script>
 
     <!-- <script src="./js/dataFactory.js"></script> -->
     <script type="text/javascript" src="./public/js/data/data.json"></script>
-
-   
   </body>
 </html>
