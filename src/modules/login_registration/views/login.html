@@ -1,21 +1,38 @@
+<section class="container">
+  <form name="myForm" ng-submit="login()" novalidate>
+    <div>
+      <h1>Hello</h1>
+      <p>Log-in for access</p>
+      <p class="message" ng-show="message">{{message}}</p>
+    </div>
+    <fieldset>
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        ng-model="user.email"
+        ng-required="true"
+      />
+      <p
+        class="error validationerror"
+        ng-show="myForm.email.$invalid && myForm.email.$touched"
+      ></p>
 
- <section class="container">
-      <form name="myForm" ng-submit="login()" novalidate>
-          <div>
-              <h1>Hello</h1>
-              <p>Log-in for access</p>
-              <p class="message" ng-show="message"> {{message}} </p>
-          </div>
-          <fieldset>
-
-              <input type="email" name="email" placeholder="Email" ng-model="user.email" ng-required="true">
-              <p class="error validationerror" ng-show="myForm.email.$invalid && myForm.email.$touched"></p>
-
-              <input type="password" name="password" placeholder="Password" ng-model="user.password" ng-required="true">
-              <p class="error validationerror" ng-show="myForm.password.$invalid && myForm.password.$touched"></p>
-
-          </fieldset>
-          <button type="submit" class="btn" ng-disabled="myForm.$invalid">Login</button>
-          <p>or <a ng-href="/public/index.html#!/registration">Sign Up</a></p>
-      </form>
-  </section>
+      <input
+        type="password"
+        name="password"
+        placeholder="Password"
+        ng-model="user.password"
+        ng-required="true"
+      />
+      <p
+        class="error validationerror"
+        ng-show="myForm.password.$invalid && myForm.password.$touched"
+      ></p>
+    </fieldset>
+    <button type="submit" class="btn" ng-disabled="myForm.$invalid">
+      Login
+    </button>
+    <p>or <a ng-href="/public/index.html#!/registration">Sign Up</a></p>
+  </form>
+</section>
