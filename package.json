@@ -24,6 +24,8 @@
   },
   "homepage": "./public/index.html",
   "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "firebase": "*",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1"
   }
