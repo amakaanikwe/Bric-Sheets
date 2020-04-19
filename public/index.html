@@ -14,6 +14,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
     <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
 
+    <!-- AngularJS Fire-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+
+
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="/__/firebase/7.13.2/firebase-app.js"></script>
     <!-- TODO: Add SDKs for Firebase products that you want to use
@@ -22,12 +30,7 @@
     <!-- Initialize Firebase -->
     <script src="/__/firebase/init.js"></script>
 
-    <!-- AngularJS Fire-->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-    <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
-    <!-- AngularFire -->
-    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+
 
     <!-- load below before stylesheets to fix MIME type error -->
     <base href="/" />
@@ -35,9 +38,9 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="./public/css/searchStylesheet.css"
+      href="../src/producer_display/searchStylesheet.css"
     />
-    <link rel="stylesheet" type="text/css" href="./public/css/appModal.css" />
+    <link rel="stylesheet" type="text/css" href="../src/producer_display/appModal.css" />
 
     <link
       rel="stylesheet"
@@ -73,23 +76,25 @@
   <body>
     <header>
       <nav
-        ng-include="'../src/modules/login_registration/views/navigation.html'"
+        ng-include="'../src/login_registration/views/navigation.html'"
       ></nav>
     </header>
     <div ng-view></div>
 
-    <script type="text/javascript" src="./public/js/app.js"></script>
-    <script type="text/javascript" src="./public/js/controller.js"></script>
+    <script type="text/javascript" src="../src/data/data.json"></script>
+    
+    <script type="text/javascript" src="../app.js"></script>
+    <script type="text/javascript" src="../src/producer_display/controller.js"></script>
     <script
       type="text/javascript"
-      src="../src/modules/login_registration/services/authenticationService.js"
+      src="../src/login_registration/services/authenticationService.js"
     ></script>
     <script
       type="text/javascript"
-      src="../src/modules/login_registration/registrationController.js"
+      src="../src/login_registration/registrationController.js"
     ></script>
 
     <!-- <script src="./js/dataFactory.js"></script> -->
-    <script type="text/javascript" src="./public/js/data/data.json"></script>
+
   </body>
 </html>
