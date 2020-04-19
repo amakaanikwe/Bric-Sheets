@@ -1,0 +1,46 @@
+.modal-header {
+    padding: 40px
+}
+
+.button {
+    float: right
+}
+
+.fa-user-o {
+    padding: 50px;
+    border: 1px solid black;
+    border-radius: 90px; 
+}
+
+.icon {
+    text-align: center
+}
+
+.modal-title {
+    text-align: center
+}
+
+.modal-body {
+    text-align:center;
+}
+
+.textBG {
+    background-color: #538ea0;
+    color: white;
+
+}
+
+.bricCert {
+    padding: 40px; 
+    margin:20px;
+}
+
+.workBodyStyle {
+    padding: 20px; 
+    margin:10px
+}
+
+.proBodyStyle {
+    padding: 40px; 
+    margin:10px
+}
