@@ -34,7 +34,7 @@ gulp.task("html", function() {
 });
 
 gulp.task("build", function() {
-    gulp.series(["css","js","html"])
+    gulp.start(["css","js","html"])
 })
 
 gulp.task("browser-sync", function() {
@@ -48,7 +48,7 @@ gulp.task("browser-sync", function() {
 
 gulp.task("dev", function() {
     devMode = true;
-    gulp.series(["build", "browser-sync"]);
+    gulp.start(["build", "browser-sync"]);
     gulp.watch(["./src/**/*.css"], ["css"]);
     gulp.watch(["./src/**/*.js"], ["js"]);
     gulp.watch(["./src/**/*.html"], ["htlm"]);
