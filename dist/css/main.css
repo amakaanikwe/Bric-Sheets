@@ -1,0 +1,91 @@
+.modal-header {
+    padding: 40px
+}
+
+.button {
+    float: right
+}
+
+.fa-user-o {
+    padding: 50px;
+    border: 1px solid black;
+    border-radius: 90px; 
+}
+
+.icon {
+    text-align: center
+}
+
+.modal-title {
+    text-align: center
+}
+
+.modal-body {
+    text-align:center;
+}
+
+.textBG {
+    background-color: #538ea0;
+    color: white;
+
+}
+
+.bricCert {
+    padding: 40px; 
+    margin:20px;
+}
+
+.workBodyStyle {
+    padding: 20px; 
+    margin:10px
+}
+
+.proBodyStyle {
+    padding: 40px; 
+    margin:10px
+}
+.containerStyle {
+  margin: 30px;
+  border-style: solid;
+  padding: 20px;
+}
+
+#header {
+  font-size: 50px;
+  padding-top: 130px;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.borderBottom {
+  border-bottom: 10px;
+}
+
+.btn {
+  border-style: solid;
+   
+}
+
+#mailbutton {
+  float: right;
+}
+
+.pagination {
+  text-align: center;
+  padding-left: 30em;
+  height: 50px;
+}
+
+/* Login & Registration Style */
+input.ng-invalid.ng-touched {
+  border: 1px solid #DA3637;
+}
+
+input.ng-valid.ng-touched {
+  border: 1px solid #509D12;
+}
