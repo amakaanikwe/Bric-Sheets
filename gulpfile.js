@@ -52,4 +52,4 @@ gulp.task("dev", function() {
     gulp.watch(["./src/**/*.css"], ["css"]);
     gulp.watch(["./src/**/*.js"], ["js"]);
     gulp.watch(["./src/**/*.html"], ["htlm"]);
-})
+});
