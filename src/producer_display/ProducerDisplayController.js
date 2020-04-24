@@ -1,8 +1,8 @@
-app.controller("SearchController", [
+app.controller("ProducerDisplayController", [
   "$scope",
   "$http",
   "$uibModal",
-  function SearchController($scope,$http, $uibModal) {
+  function ProducerDisplayController($scope,$http, $uibModal) {
     $http.get('../src/data/data.json').then(function(response) { 
       $scope.producers = response.data; 
       $scope.producerItems = response.data;
@@ -53,7 +53,7 @@ app.controller("SearchController", [
           size: "lg",
           ariaLabelledBy: "modal-title", 
            ariaDescribedBy: "modal-body",
-          templateUrl: "../src/producer_display/views/appModal.html",
+          templateUrl: "../src/producer_display/views/producerModal.html",
           scope: $scope,
           controller: function($scope) {
             $scope.person = person;
