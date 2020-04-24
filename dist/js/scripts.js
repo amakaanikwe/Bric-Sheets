@@ -1,29 +1,3 @@
-app.factory('DataFactory', '$http', function($http){
-
-    function getData() {
-
-        return $http.get('data/data.json'); 
-    }
-
-    return {
-        data: data
-    }
-
-});
-app.controller("RegistrationController", [
-  "$scope",
-  "Authentication",
-  function ($scope, Authentication) {
-    $scope.login = function () {
-      Authentication, login($scope.user);
-    };
-
-    $scope.register = function () {
-      Authentication.register($scope.user);
-    }; //register
-  },
-]); //Controller
-
 app.controller("SearchController", [
   "$scope",
   "$http",
@@ -98,6 +72,32 @@ app.controller("SearchController", [
 
 
 
+app.controller("RegistrationController", [
+  "$scope",
+  "Authentication",
+  function ($scope, Authentication) {
+    $scope.login = function () {
+      Authentication, login($scope.user);
+    };
+
+    $scope.register = function () {
+      Authentication.register($scope.user);
+    }; //register
+  },
+]); //Controller
+
+app.factory('DataFactory', '$http', function($http){
+
+    function getData() {
+
+        return $http.get('data/data.json'); 
+    }
+
+    return {
+        data: data
+    }
+
+});
 app.factory("Authentication", [
   "$rootScope",
   "$firebaseAuth",
