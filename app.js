@@ -11,8 +11,8 @@ app.config (['$routeProvider', function($routeProvider) {
       controller: 'RegistrationController'
     })
     .when('/success', {
-      templateUrl: './public/js/partials/searchList.html',
-      controller: 'SearchController'
+      templateUrl: './public/js/partials/producerSearchList.html',
+      controller: 'ProducerDisplayController'
     })
     .otherwise({
       redirectTo: '/login'
