@@ -1,8 +1,34 @@
-app.controller("SearchController", [
+app.factory('DataFactory', '$http', function($http){
+
+    function getData() {
+
+        return $http.get('data/data.json'); 
+    }
+
+    return {
+        data: data
+    }
+
+});
+app.controller("RegistrationController", [
+  "$scope",
+  "Authentication",
+  function ($scope, Authentication) {
+    $scope.login = function () {
+      Authentication, login($scope.user);
+    };
+
+    $scope.register = function () {
+      Authentication.register($scope.user);
+    }; //register
+  },
+]); //Controller
+
+app.controller("ProducerDisplayController", [
   "$scope",
   "$http",
   "$uibModal",
-  function SearchController($scope,$http, $uibModal) {
+  function ProducerDisplayController($scope,$http, $uibModal) {
     $http.get('../src/data/data.json').then(function(response) { 
       $scope.producers = response.data; 
       $scope.producerItems = response.data;
@@ -53,7 +79,7 @@ app.controller("SearchController", [
           size: "lg",
           ariaLabelledBy: "modal-title", 
            ariaDescribedBy: "modal-body",
-          templateUrl: "../src/producer_display/views/appModal.html",
+          templateUrl: "../src/producer_display/views/producerModal.html",
           scope: $scope,
           controller: function($scope) {
             $scope.person = person;
@@ -72,32 +98,6 @@ app.controller("SearchController", [
 
 
 
-app.controller("RegistrationController", [
-  "$scope",
-  "Authentication",
-  function ($scope, Authentication) {
-    $scope.login = function () {
-      Authentication, login($scope.user);
-    };
-
-    $scope.register = function () {
-      Authentication.register($scope.user);
-    }; //register
-  },
-]); //Controller
-
-app.factory('DataFactory', '$http', function($http){
-
-    function getData() {
-
-        return $http.get('data/data.json'); 
-    }
-
-    return {
-        data: data
-    }
-
-});
 app.factory("Authentication", [
   "$rootScope",
   "$firebaseAuth",
