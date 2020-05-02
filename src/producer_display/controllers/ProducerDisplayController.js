@@ -53,7 +53,7 @@ app.controller("ProducerDisplayController", [
           size: "lg",
           ariaLabelledBy: "modal-title", 
            ariaDescribedBy: "modal-body",
-          templateUrl: "../src/producer_display/views/producerModal.html",
+          templateUrl: "./producer_display/views/producerModal.html",
           scope: $scope,
           controller: function($scope) {
             $scope.person = person;
