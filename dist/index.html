@@ -12,7 +12,7 @@
     <!-- Animation Needed ui -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
-    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+    <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
 
     <!-- AngularJS Fire-->
     <!-- Firebase -->
@@ -21,13 +21,29 @@
     <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
 
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="/__/firebase/7.13.2/firebase-app.js"></script>
-    <!-- TODO: Add SDKs for Firebase products that you want to use
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="/__/firebase/7.13.2/firebase-analytics.js"></script>
-    <!-- Initialize Firebase -->
-    <script src="/__/firebase/init.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBREKlnSV9gaTyMYRPump8bkP9L9CwCw6k",
+    authDomain: "producer-app-13eef.firebaseapp.com",
+    databaseURL: "https://producer-app-13eef.firebaseio.com",
+    projectId: "producer-app-13eef",
+    storageBucket: "producer-app-13eef.appspot.com",
+    messagingSenderId: "1008737255457",
+    appId: "1:1008737255457:web:00a27fd33cc82acf13e360",
+    measurementId: "G-3LH3NZE4QM"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
 
 
 
