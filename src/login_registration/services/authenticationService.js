@@ -1,13 +1,19 @@
 app.factory("Authentication", [
   "$rootScope",
+  "$location",
   "$firebaseAuth",
-  function ($rootScope, $firebaseAuth) {
-    var ref = firebase.database().ref();
-    var auth = $firebaseAuth();
+  function ($rootScope,$location, $firebaseAuth) {
+
+    const ref = firebase.database().ref();
+    const auth = $firebaseAuth();
 
     return {
       login: function (user) {
-        $rootScope.message = "Welcome " + $rootScope.user.email;
+        auth.$signInWithEmailAndPassword(user.email, user.password).then(function(user) {
+          $location.path("/success");
+        }).catch(function(error){
+          $rootScope.message = error.message;
+        }) //signInWithEmailAndPassword
       }, //login
       register: function (user) {
         auth
@@ -18,8 +24,8 @@ app.factory("Authentication", [
               regUser: regUser.uid,
               firstname: user.firstname,
               lastname: user.lastname,
-              email: user.email,
-            }); //userinfo
+              email: user.email
+            }); //user info
             $rootScope.message = "Welcome" + user.firstName;
           })
           .catch(function (error) {
