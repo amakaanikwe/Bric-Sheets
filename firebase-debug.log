@@ -1,29 +1,25 @@
-[debug] [2020-05-01T12:21:13.444Z] ----------------------------------------------------------------------
-[debug] [2020-05-01T12:21:13.447Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
-[debug] [2020-05-01T12:21:13.447Z] CLI Version:   8.2.0
-[debug] [2020-05-01T12:21:13.447Z] Platform:      darwin
-[debug] [2020-05-01T12:21:13.448Z] Node Version:  v12.14.1
-[debug] [2020-05-01T12:21:13.454Z] Time:          Fri May 01 2020 08:21:13 GMT-0400 (Eastern Daylight Time)
-[debug] [2020-05-01T12:21:13.454Z] ----------------------------------------------------------------------
-[debug] [2020-05-01T12:21:13.455Z] 
-[debug] [2020-05-01T12:21:13.509Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2020-05-01T12:21:13.509Z] > authorizing via signed-in user
-[debug] [2020-05-01T12:21:13.510Z] [iam] checking project producer-app-13eef for permissions ["firebase.projects.get"]
-[debug] [2020-05-01T12:21:13.513Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2020-05-01T12:21:13.514Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
- <request body omitted>
-[debug] [2020-05-01T12:21:13.938Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 01 May 2020 12:21:13 GMT","server":"scaffolding on HTTPServer2","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
-[debug] [2020-05-01T12:21:13.990Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/producer-app-13eef:testIamPermissions  
+[debug] [2020-05-03T18:48:21.120Z] ----------------------------------------------------------------------
+[debug] [2020-05-03T18:48:21.123Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2020-05-03T18:48:21.123Z] CLI Version:   8.2.0
+[debug] [2020-05-03T18:48:21.123Z] Platform:      darwin
+[debug] [2020-05-03T18:48:21.123Z] Node Version:  v12.14.1
+[debug] [2020-05-03T18:48:21.124Z] Time:          Sun May 03 2020 14:48:21 GMT-0400 (Eastern Daylight Time)
+[debug] [2020-05-03T18:48:21.124Z] ----------------------------------------------------------------------
+[debug] [2020-05-03T18:48:21.125Z] 
+[debug] [2020-05-03T18:48:21.138Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-03T18:48:21.140Z] > authorizing via signed-in user
+[debug] [2020-05-03T18:48:21.140Z] [iam] checking project producer-app-13eef for permissions ["firebase.projects.get"]
+[debug] [2020-05-03T18:48:21.144Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/producer-app-13eef:testIamPermissions  
  {"permissions":["firebase.projects.get"]}
-[debug] [2020-05-01T12:21:14.251Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 01 May 2020 12:21:14 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=156","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
-[debug] [2020-05-01T12:21:14.252Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/producer-app-13eef  
+[debug] [2020-05-03T18:48:21.419Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 03 May 2020 18:48:21 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=153","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-03T18:48:21.421Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/producer-app-13eef  
  
-[debug] [2020-05-01T12:21:14.575Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 01 May 2020 12:21:14 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-03T18:48:21.672Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 03 May 2020 18:48:21 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
 [info] 
 [info] === Serving from '/Users/mookie.me.you/Desktop/Builds/Bric_Sheets'...
 [info] 
-[debug] [2020-05-01T12:21:14.578Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/producer-app-13eef/webApps/-/config  
+[debug] [2020-05-03T18:48:21.677Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/producer-app-13eef/webApps/-/config  
  
-[debug] [2020-05-01T12:21:15.125Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 01 May 2020 12:21:15 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-03T18:48:22.271Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 03 May 2020 18:48:22 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
 [info] i  hosting: Serving hosting files from: dist
 [info] ✔  hosting: Local server: http://localhost:5000
