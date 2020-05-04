@@ -3,7 +3,7 @@ app.controller("ProducerDisplayController", [
   "$http",
   "$uibModal",
   function ProducerDisplayController($scope,$http, $uibModal) {
-    $http.get('../src/data/data.json').then(function(response) { 
+    $http.get('./data/data.json').then(function(response) { 
       $scope.producers = response.data; 
       $scope.producerItems = response.data;
       $scope.filteredProducers = [],
