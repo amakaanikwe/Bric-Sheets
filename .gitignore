@@ -1,0 +1,4 @@
+node_modules/
+lib/angular/
+lib/firebase_indexFile/
+lib/notes.js
