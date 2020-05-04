@@ -20,30 +20,22 @@ app.config (['$routeProvider', function($routeProvider) {
 
 }]);
 
-app.controller("RegistrationController", [
-  "$scope",
-  "Authentication",
-  function ($scope, Authentication) {
-    $scope.login = function () {
-      Authentication, login($scope.user);
-    };
-
-    $scope.register = function () {
-      Authentication.register($scope.user);
-    }; //register
-  },
-]); //Controller
-
 app.factory("Authentication", [
   "$rootScope",
+  "$location",
   "$firebaseAuth",
-  function ($rootScope, $firebaseAuth) {
-    var ref = firebase.database().ref();
-    var auth = $firebaseAuth();
+  function ($rootScope,$location, $firebaseAuth) {
+
+    const ref = firebase.database().ref();
+    const auth = $firebaseAuth();
 
     return {
       login: function (user) {
-        $rootScope.message = "Welcome " + $rootScope.user.email;
+        auth.$signInWithEmailAndPassword(user.email, user.password).then(function(user) {
+          $location.path("/success");
+        }).catch(function(error){
+          $rootScope.message = error.message;
+        }) //signInWithEmailAndPassword
       }, //login
       register: function (user) {
         auth
@@ -54,8 +46,8 @@ app.factory("Authentication", [
               regUser: regUser.uid,
               firstname: user.firstname,
               lastname: user.lastname,
-              email: user.email,
-            }); //userinfo
+              email: user.email
+            }); //user info
             $rootScope.message = "Welcome" + user.firstName;
           })
           .catch(function (error) {
@@ -65,6 +57,20 @@ app.factory("Authentication", [
     };
   },
 ]); //factory
+
+app.controller("RegistrationController", [
+  "$scope",
+  "Authentication",
+  function ($scope, Authentication) {
+    $scope.login = function () {
+      Authentication.login($scope.user);
+    }; // login
+
+    $scope.register = function () {
+      Authentication.register($scope.user);
+    }; //register
+  },
+]); //Controller
 
 app.controller("ProducerDisplayController", [
   "$scope",
