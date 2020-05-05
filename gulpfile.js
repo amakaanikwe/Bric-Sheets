@@ -33,8 +33,16 @@ gulp.task("html", function() {
         }));
 });
 
+gulp.task("json", function() {
+    gulp.src("./src/**/*.json")
+        .pipe(gulp.dest("./dist/data"))
+        .pipe(browserSync.reload({
+            stream: true
+        }));
+});
+
 gulp.task("build", function() {
-    gulp.start(["css","js","html"])
+    gulp.start(["css","js","json","html"])
 })
 
 gulp.task("browser-sync", function() {
@@ -51,5 +59,6 @@ gulp.task("dev", function() {
     gulp.start(["build", "browser-sync"]);
     gulp.watch(["./src/**/*.css"], ["css"]);
     gulp.watch(["./src/**/*.js"], ["js"]);
+    gulp.watch(["./src/**/*.json"], ["json"]);
     gulp.watch(["./src/**/*.html"], ["htlm"]);
 });
