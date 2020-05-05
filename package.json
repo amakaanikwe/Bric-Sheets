@@ -29,7 +29,7 @@
   "homepage": "./dist/index.html",
   "devDependencies": {
     "browser-sync": "^2.26.7",
-    "firebase": "*",
+    "firebase": "3.6.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1"
   }
