@@ -1,4 +1,5 @@
 [
     "./src/app.js",
+    "./src/**/authenticationService.js",
     "./src/**/*.js"
 ]
