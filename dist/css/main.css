@@ -1,3 +1,22 @@
+.formContainer {
+    position: relative;
+    text-align: center;
+  }
+  .loginForm {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 20px;
+  }
+
+  .logFormText{
+      color: white;
+  }
+
+  .loginBtn {
+      margin: 10px;
+  }
 .modal-header {
     padding: 40px
 }
