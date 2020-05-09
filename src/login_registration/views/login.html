@@ -1,8 +1,14 @@
-<section class="container">
-  <form name="myForm" ng-submit="login()" novalidate>
+
+<section class="container formContainer">
+  <img
+class="img-responsive"
+src="https://www.dropbox.com/s/zh6tgeyqvnffw33/broadcastCamcorder.jpg?raw=1"
+alt="Find Your Next Producer"
+style="width:100%"
+/>
+  <form name="myForm" ng-submit="login()" class="loginForm" novalidate>
     <div>
-      <h1>Hello</h1>
-      <p>Log-in for access</p>
+      <p class="logFormText">Log-in for access</p>
       <p class="message" ng-show="message">{{message}}</p>
     </div>
     <fieldset>
@@ -30,9 +36,9 @@
         ng-show="myForm.password.$invalid && myForm.password.$touched"
       ></p>
     </fieldset>
-    <button type="submit" class="btn" ng-disabled="myForm.$invalid">
+    <button type="submit" class="btn loginBtn" ng-disabled="myForm.$invalid">
       Login
     </button>
-    <p>or <a ng-href="#!/registration">Sign Up</a></p>
+    <p class="logFormText">or <a ng-href="#!/registration">Sign Up</a></p>
   </form>
 </section>
