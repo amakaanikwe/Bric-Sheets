@@ -6,61 +6,73 @@
     </div>
 
     <fieldset>
-      <input
-        type="text"
-        name="firstName"
-        placeholder="First Name"
-        ng-model="user.firstName"
-        ng-required="true"
-      />
-      <p
-        class="error validationerror"
-        ng-show="myForm.firstName.$invalid && myForm.firstName.$touched"
-      >
-        Required Field
-      </p>
+      <div class="row">
+        <div class="col-lg-6">
+          <input
+            type="text"
+            name="firstName"
+            placeholder="First Name"
+            ng-model="user.firstName"
+            ng-required="true"
+          />
+          <p
+            class="error validationerror"
+            ng-show="myForm.firstName.$invalid && myForm.firstName.$touched"
+          >
+            Required Field
+          </p>
+        </div>
+        
+        <div class="col-lg-6">
+          <input
+            type="text"
+            name="lastName"
+            placeholder="Last Name"
+            ng-model="user.lastName"
+            ng-required="true"
+          />
+          <p
+            class="error validationerror"
+            ng-show="myForm.lastName.$invalid && myForm.lastName.$touched"
+          >
+            Required Field
+          </p>
+         </div>
+      </div> <!--end of first row -->
 
-      <input
-        type="text"
-        name="lastName"
-        placeholder="Last Name"
-        ng-model="user.lastName"
-        ng-required="true"
-      />
-      <p
-        class="error validationerror"
-        ng-show="myForm.lastName.$invalid && myForm.lastName.$touched"
-      >
-        Required Field
-      </p>
+      <div class="row">
+        <div class="col-lg-12">
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            ng-model="user.email"
+            ng-required="true"
+          />
+          <p
+            class="error validationerror"
+            ng-show="myForm.email.$invalid && myForm.email.$touched"
+          >
+            Must be valid
+          </p>
+        </div>
 
-      <input
-        type="email"
-        name="email"
-        placeholder="Email"
-        ng-model="user.email"
-        ng-required="true"
-      />
-      <p
-        class="error validationerror"
-        ng-show="myForm.email.$invalid && myForm.email.$touched"
-      >
-        Must be valid
-      </p>
-
-      <input
-        type="password"
-        name="password"
-        placeholder="Password"
-        ng-model="user.password"
-        ng-required="true"
-      />
-      <p
-        class="error validationerror"
-        ng-show="myForm.password.$invalid && myForm.password.$touched"
-      >
-        Required
-      </p>
+        <div class="col-lg-12">
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            ng-model="user.password"
+            ng-required="true"
+          />
+          <p
+            class="error validationerror"
+            ng-show="myForm.password.$invalid && myForm.password.$touched"
+          >
+            Required
+          </p>
+        </div>
+      </div> <!-- end of second row-->
     </fieldset>
 
     <button type="submit" class="btn" ng-disabled="regForm.$invalid">
