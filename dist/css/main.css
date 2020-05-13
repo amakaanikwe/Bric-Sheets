@@ -17,6 +17,19 @@
   .loginBtn {
       margin: 10px;
   }
+
+  .regForm {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 20px;
+  }
+
+  .regFormText{
+    color: white;
+    margin: 10px;
+  }
 .modal-header {
     padding: 40px
 }
