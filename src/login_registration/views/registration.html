@@ -1,13 +1,19 @@
-<section class="container">
-  <form name="regForm" ng-submit="register()" novalidate>
+<section class="container formContainer">
+  <img
+  class="img-responsive"
+  src="https://www.dropbox.com/s/7n5ci3p5uoruv6f/andyone--WW8jBak7bo-unsplash.jpg?raw=1"
+  alt="Find Your Next Producer"
+  style="width:100%"
+  />
+  <form name="regForm" ng-submit="register()" class="regForm" novalidate>
     <div>
-      <h1>Register</h1>
+      <h1 class="regFormText">Register</h1>
       <p class="message" ng-show="message">{{message}}</p>
     </div>
 
     <fieldset>
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-5">
           <input
             type="text"
             name="firstName"
@@ -23,7 +29,7 @@
           </p>
         </div>
         
-        <div class="col-lg-6">
+        <div class="col-lg-5">
           <input
             type="text"
             name="lastName"
