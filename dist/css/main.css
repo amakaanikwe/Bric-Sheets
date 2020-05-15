@@ -106,6 +106,17 @@
     padding: 40px; 
     margin:10px
 }
+.searchProdContainer{
+  margin: 0px 80px;
+  margin-left: 800px;
+  padding: 20px;
+}
+
+.searchProdTitle {
+  margin: 0px 80px;
+  margin-left: 800px;
+  padding: 20px;
+}
 .containerStyle {
   margin: 30px;
   border-style: solid;
