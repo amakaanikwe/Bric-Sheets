@@ -4,16 +4,21 @@
     <img
       class="img-responsive"
       src="https://dl.dropboxusercontent.com/s/zh6tgeyqvnffw33/broadcastCamcorder.jpg?dl=0"
+
       alt="Find Your Next Producer"
       style="width:100%"
     />
   </div>
   <section class="container">
+
     <div class="form-row mb-2">
-      <div class="col">
-        <label class="col-form-label searchProdTitle" for="searchQuery">
-          Search: <span ng-if="query"></span></label>
-      </div><!-- label -->
+      <div class="row">
+        <div class="col-lg-7"></div>
+        <div class="col-lg-5 ">
+          <label class="col-form-label searchProdTitle" for="searchQuery">
+            Search: <span ng-if="query"></span></label>
+        </div><!-- label -->
+      </div>
       <div class="row">
         <div class="col-lg-7"></div>
         <div class="col-lg-5 container searchProdContainer">
@@ -22,6 +27,7 @@
         </div><!-- col-12 -->
     </div>
     </div><!-- form-row -->
+
   </section>
   
   <section class="container containerStyle" ng-repeat="person in filteredProducers |orderBy: 'lastName'| filter: query ">
