@@ -2,17 +2,22 @@
     position: relative;
     text-align: center;
   }
+
   .loginForm {
     position: absolute;
     top: 80%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -90%);
     margin: 20px;
   }
 
   .logFormText{
       color: white;
       margin: 0 0 3px;
+  }
+
+  .loginForm h1 {
+    font-size: 4em;
   }
 
   .loginBtn {
@@ -28,8 +33,16 @@
   }
 
   .regFormText{
+    font-size: 4em;
     color: white;
     margin: 30px;
+    padding-right: 45px;
+  }
+
+  @media screen and (max-width: 700px) {   
+    .regFormText {
+    	font-size: 2em;
+    } 
   }
 
   input[type=text],[type=email],[type=password], select {
