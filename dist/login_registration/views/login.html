@@ -1,16 +1,20 @@
 
-<section class="container formContainer">
-  <img
-class="img-responsive"
-src="https://dl.dropboxusercontent.com/s/e3ldzsl7urq5vhk/broadcastCamcorder_fixed.jpg?dl=0"
-alt="Find Your Next Producer"
-style="width:100%"
-/>
+<section id="loginImg" class="container formContainer">
+
+  <picture>
+    <source srcset="https://dl.dropboxusercontent.com/s/e3ldzsl7urq5vhk/broadcastCamcorder_fixed.jpg?dl=0" media="(min-width: 700px)">
+    <img
+    class="img-responsive"
+    src="https://dl.dropboxusercontent.com/s/kfkiryoao1dyyf7/broadcastCamcorder_small_screen.jpg?dl=0" alt="Find Your Next Producer" style="width:100%"
+    />
+  </picture>
+
+
   <form name="myForm" ng-submit="login()" class="loginForm" novalidate>
     <div>
       <h1 class="logFormText">Producer Display</h1>
       <p class="logFormText">Login</p>
-      <p class="message" ng-show="message">{{message}}</p>
+      <p class="message logFormText" ng-show="message">{{message}}</p>
     </div>
     <fieldset>
       <input
