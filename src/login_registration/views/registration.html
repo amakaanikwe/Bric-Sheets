@@ -1,10 +1,16 @@
 <section class="container formContainer">
-  <img
-  class="img-responsive"
-  src="https://dl.dropboxusercontent.com/s/7n5ci3p5uoruv6f/andyone--WW8jBak7bo-unsplash.jpg?dl=0"
-  alt="Find Your Next Producer"
-  style="width:100%"
-  />
+  <picture>
+    <source srcset="https://dl.dropboxusercontent.com/s/18rhada44qq5nz2/andyone--WW8jBak7bo-unsplash_web.jpg?dl=0" media="(min-width: 700px)">
+
+    <img
+    class="img-responsive"
+    src="https://dl.dropboxusercontent.com/s/wf23grhx749ercy/andyone--WW8jBak7bo-unsplash_small.jpg?dl=0"
+    alt="registration image"
+    style="width:100%"
+    />
+  </picture>
+
+
   <form name="regForm" ng-submit="register()" class="regForm" novalidate>
     <div>
       <h1 class="regFormText">Register</h1>
